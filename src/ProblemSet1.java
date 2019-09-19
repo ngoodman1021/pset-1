@@ -21,18 +21,22 @@ public class ProblemSet1 {
          * 
          * What is the area (in square millimeters) of an 8.5-by-11-inch sheet of paper?
          */
-        double length = 25.4*8.5;
-		double width = 25.4*11;
-		double area = length*width;
-		System.out.println((Math.ceil(area))+ " square millimeters");
         
+        double length = 25.4 * 8.5;
+		double width = 25.4 * 11;
+		double area = length*width;
+		System.out.println((Math.round(area))+" square millimeters\n");
+
         
         /*
          * Exercise 2.
          * 
          * What is the perimeter (in centimeters) of an 8.5-by-11-inch sheet of paper?
          */
-        
+        double len = 2.54 * 8.5;
+		double wid = 2.54 * 11;
+		double per = 2 * (len + wid);
+		System.out.println((Math.round(per))+" centimeters\n");
         
         
         /*
@@ -41,7 +45,10 @@ public class ProblemSet1 {
          * What is the length of the diagonal (in inches) between two corners on an 8.5-
          * by-11-inch sheet of paper?
          */
-        
+        double l = 8.5;
+		double w = 11;
+		double diagonal = Math.sqrt((l * l) + (w * w));
+		System.out.println((Math.round(diagonal))+" inches\n");
         
 
         /*
