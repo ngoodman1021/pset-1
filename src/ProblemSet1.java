@@ -57,37 +57,37 @@ public class ProblemSet1 {
          * Given the grading policy and the homework, quiz, and test grades I received,
          * what marking period grade will I get?
          */
-        int homeworkWorth = 0.15;
-		int quizWorth = 0.35;
-		int testWorth = 0.50;
+        double homeworkWorth = 0.15;
+		double quizWorth = 0.35;
+		double testWorth = 0.50;
         
-		int homework1 = 88;
-        int homework2 = 91;
-        int homework3 = 0;
-        int quiz1 = 84;
-        int quiz2 = 89;
-        int quiz3 = 93;
-        int test1 = 74;
-        int test2 = 87;
-        int test3 = 82;
+		double homework1 = 88;
+        double homework2 = 91;
+        double homework3 = 0;
+        double quiz1 = 84;
+        double quiz2 = 89;
+        double quiz3 = 93;
+        double test1 = 74;
+        double test2 = 87;
+        double test3 = 82;
 		
-		int homeworkWeight1 = homework1 * homeworkWorth;
-        int homeworkWeight2 = homework2 * homeworkWorth;
-        int homeworkWeight3 = homework3 * homeworkWorth;
-        int quizWeight1 = quiz1 * quizWorth;
-        int quizWeight2 = quiz2 * quizWorth;
-        int quizWeight3 = quiz3 * quizWorth;
-        int testWeight1 = test1 * testWorth;
-        int testWeight2 = test2 * testWorth;
-        int testWeight3 = test3 * testWorth;
+		double homeworkWeight1 = homework1 * homeworkWorth;
+        double homeworkWeight2 = homework2 * homeworkWorth;
+        double homeworkWeight3 = homework3 * homeworkWorth;
+        double quizWeight1 = quiz1 * quizWorth;
+        double quizWeight2 = quiz2 * quizWorth;
+        double quizWeight3 = quiz3 * quizWorth;
+        double testWeight1 = test1 * testWorth;
+        double testWeight2 = test2 * testWorth;
+        double testWeight3 = test3 * testWorth;
 		
-		int homeworkAvg = (homeworkWeight1 + homeworkWeight2 + homeworkWeight3)/3;
-		int quizAvg = (quizWeight1 + quizWeight2 + quizWeight3)/3;
-		int testAvg = (testWeight1 + testWeight2 + testWeight3)/3;
+		double homeworkAvg = (homeworkWeight1 + homeworkWeight2 + homeworkWeight3)/3;
+		double quizAvg = (quizWeight1 + quizWeight2 + quizWeight3)/3;
+		double testAvg = (testWeight1 + testWeight2 + testWeight3)/3;
 		
-		int Percentage = (Math.cells(homeworkAvg + quizAvg + testAvg);
+		double Percentage = (Math.round(homeworkAvg + quizAvg + testAvg));
 		
-		System.out.prinln(Percentage + "%.");
+		System.out.println(Percentage + "%.\n");
 		
         /*
          * Exercise 5.
@@ -95,9 +95,28 @@ public class ProblemSet1 {
          * I make $12.50/hour working as a cashier at a local supermarket. How much money
          * will I make this week?
          */
-
+		double monHours = 7.5;
+		double tuesHours = 8;
+		double wednesHours = 10.5;
+		double thursHours = 9.5;
+		double friHours = 6;
+		double satHours = 11.5;
+		double sunHours = 0;
         
-        
+        double monPay = monHours * 12.50;
+		double tuesPay = tuesHours * 12.50;
+		double wednesPay = wednesHours * 12.50;
+		double thursPay = thursHours * 12.50;
+		double friPay = friHours * 12.50;
+		double satPay = satHours * 12.50;
+		double sunPay = sunHours * 12.50;
+		
+		double totalPay = monPay + tuesPay + wednesPay + thursPay + friPay + satPay + sunPay;
+		
+		System.out.println("$"+ (Math.round(totalPay))"\n");
+		
+		
+		
         /*
          * Exercise 6.
          * 
