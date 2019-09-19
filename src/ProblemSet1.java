@@ -57,8 +57,11 @@ public class ProblemSet1 {
          * Given the grading policy and the homework, quiz, and test grades I received,
          * what marking period grade will I get?
          */
+        int homeworkWorth = 0.15;
+		int quizWorth = 0.35;
+		int testWorth = 0.50;
         
-        int homework1 = 88;
+		int homework1 = 88;
         int homework2 = 91;
         int homework3 = 0;
         int quiz1 = 84;
@@ -67,9 +70,25 @@ public class ProblemSet1 {
         int test1 = 74;
         int test2 = 87;
         int test3 = 82;
-        
-        
-        
+		
+		int homeworkWeight1 = homework1 * homeworkWorth;
+        int homeworkWeight2 = homework2 * homeworkWorth;
+        int homeworkWeight3 = homework3 * homeworkWorth;
+        int quizWeight1 = quiz1 * quizWorth;
+        int quizWeight2 = quiz2 * quizWorth;
+        int quizWeight3 = quiz3 * quizWorth;
+        int testWeight1 = test1 * testWorth;
+        int testWeight2 = test2 * testWorth;
+        int testWeight3 = test3 * testWorth;
+		
+		int homeworkAvg = (homeworkWeight1 + homeworkWeight2 + homeworkWeight3)/3;
+		int quizAvg = (quizWeight1 + quizWeight2 + quizWeight3)/3;
+		int testAvg = (testWeight1 + testWeight2 + testWeight3)/3;
+		
+		int Percentage = (Math.cells(homeworkAvg + quizAvg + testAvg);
+		
+		System.out.prinln(Percentage + "%.");
+		
         /*
          * Exercise 5.
          * 
