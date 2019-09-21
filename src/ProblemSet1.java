@@ -122,7 +122,55 @@ public class ProblemSet1 {
          * 
          * What is my take-home pay each check?
          */
+            double yearlyPay = 117000;
+    double monthlyPay = yearlyPay / 12;
+    double biweeklyPay = monthlyPay / 2;
+    double federalTax = 0.24;
+    double stateTax = 0.0637;
+    double preTax = 0.07;
+
+    double biweeklyFederal = biweeklyPay * federalTax;
+    double biFed = biweeklyPay - biweeklyFederal;
+    double biweeklyState = biFed * stateTax;
+    double biState = biFed - biweeklyState;
+    double biweeklyPre = biState * preTax;
+    double biweeklyTotal = biState - biweeklyPre;
+
+    System.out.println("\n$"+ (Math.round(biweeklyTotal)));
+         
         
+        /*
+         * Exercise 7.
+         * 
+         * I am planning a class trip next month. How many buses do I need, and how many
+         * people will be on the last bus?
+         */
+      double students = 273;
+      double teachers = 28;
+      double totalPeople = students + teachers;
+      double busCapacity = 54;
+      double remainderOfPeople = totalPeople % busCapacity;
+      double amountofPeople = totalPeople - remainderOfPeople;
+      double numberOfBuses = (amountofPeople / busCapacity) + 1;
+
+      System.out.println("\n" + numberOfBuses + " buses are needed, with " + remainderOfPeople + " passengers on the last bus.");
+        
+        
+        /*
+         * Exercise 8.
+         * 
+         * What is the surface area of a standard Cornhole board?
+         */
+
+      double boardLength = 48;
+      double boardWidth = 24;
+      double boardArea = boardLength * boardWidth;
+      double holeDiameter = 6;
+      double holeRadius = holeDiameter/2;
+      double holeArea = Math.pow(holeRadius, 2) * 3.14;
+      double surfaceArea = boardArea - holeArea;
+
+      System.out.println("\n" + (Math.round(surfaceArea)) + " square inches.");
         
         
         /*
@@ -131,7 +179,16 @@ public class ProblemSet1 {
          * I am planning a class trip next month. How many buses do I need, and how many
          * people will be on the last bus?
          */
-        
+      boolean isLeapYear;
+      double year =
+      // divisible by 4
+      isLeapYear = (year % 4 == 0);
+      // divisible by 4 and not 100
+      isLeapYear = isLeapYear && (year % 100 != 0);
+      // divisible by 4 and not 100 unless divisible by 400
+      isLeapYear = isLeapYear || (year % 400 == 0);
+
+      System.out.println(isLeapYear);
         
         
         /*
