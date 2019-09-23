@@ -24,10 +24,13 @@ public class ProblemSet1 {
          * What is the area (in square millimeters) of an 8.5-by-11-inch sheet of paper?
          */
         
-        double length = 25.4 * 8.5;
-		double width = 25.4 * 11;
-		double area = length*width;
-		System.out.println((Math.round(area))+" square millimeters\n");
+        double length = 8.5;
+		double width = 11;
+		double milli = 25.4;
+		double lenMilli = length * milli;
+		double widMilli = width * milli;
+		double area = lenMilli * widMilli;
+		System.out.println("\n" + ("%,.2f", area) +" square millimeters\n");
 
         
         /*
@@ -35,9 +38,12 @@ public class ProblemSet1 {
          * 
          * What is the perimeter (in centimeters) of an 8.5-by-11-inch sheet of paper?
          */
-        double len = 2.54 * 8.5;
-		double wid = 2.54 * 11;
-		double per = 2 * (len + wid);
+        double len = 8.5;
+		double wid = 11;
+		double cen = 2.54;
+		double lenCen = len * cen;
+		double widCen = wid * cen;
+		double per = 2 * (lenCen + widCen);
 		System.out.println((Math.round(per * 100.0)/100.0) +" centimeters\n");
         
         
@@ -218,7 +224,7 @@ public class ProblemSet1 {
 		double v = 14;
 		double quation = 35.74 + (0.6215 * t) + (((0.4275 * t) - 35.75)* Math.pow(v, 0.16));
 		
-		System.out.println((Math.round(quation* 100.0)/100.0) + " degrees.");
+		System.out.println("\n" + (Math.round(quation* 100.0)/100.0) + " degrees.");
 		
 		
         
