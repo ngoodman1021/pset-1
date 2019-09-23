@@ -12,6 +12,8 @@
  * questions, and fix your mistakes. It's the only way to get good at programming.
  */
 
+import java.lang.Math;
+
 public class ProblemSet1 {
     
     public static void main(String[] args) {
@@ -36,7 +38,7 @@ public class ProblemSet1 {
         double len = 2.54 * 8.5;
 		double wid = 2.54 * 11;
 		double per = 2 * (len + wid);
-		System.out.println((Math.round(per))+" centimeters\n");
+		System.out.println((Math.round(per * 100.0)/100.0) +" centimeters\n");
         
         
         /*
@@ -48,7 +50,7 @@ public class ProblemSet1 {
         double l = 8.5;
 		double w = 11;
 		double diagonal = Math.sqrt((l * l) + (w * w));
-		System.out.println((Math.round(diagonal))+" inches\n");
+		System.out.println((Math.round(diagonal * 100.0)/100.0)+" inches\n");
         
 
         /*
@@ -84,8 +86,9 @@ public class ProblemSet1 {
 		double homeworkAvg = (homeworkWeight1 + homeworkWeight2 + homeworkWeight3)/3;
 		double quizAvg = (quizWeight1 + quizWeight2 + quizWeight3)/3;
 		double testAvg = (testWeight1 + testWeight2 + testWeight3)/3;
+		double overallGrade = homeworkAvg + quizAvg + testAvg;
 		
-		double Percentage = (Math.round(homeworkAvg + quizAvg + testAvg));
+		double Percentage = Math.round(overallGrade * 100.0)/100.0;
 		
 		System.out.println(Percentage + "%.\n");
 		
@@ -113,7 +116,7 @@ public class ProblemSet1 {
 		
 		double totalPay = monPay + tuesPay + wednesPay + thursPay + friPay + satPay + sunPay;
 		
-		System.out.println("$"+ (Math.round(totalPay))"\n");
+		System.out.println("$"+ (Math.round(totalPay * 100.0)/100.0));
 		
 		
 		
@@ -122,7 +125,7 @@ public class ProblemSet1 {
          * 
          * What is my take-home pay each check?
          */
-            double yearlyPay = 117000;
+    double yearlyPay = 117000;
     double monthlyPay = yearlyPay / 12;
     double biweeklyPay = monthlyPay / 2;
     double federalTax = 0.24;
@@ -136,7 +139,7 @@ public class ProblemSet1 {
     double biweeklyPre = biState * preTax;
     double biweeklyTotal = biState - biweeklyPre;
 
-    System.out.println("\n$"+ (Math.round(biweeklyTotal)));
+    System.out.println("\n$"+ (Math.round(biweeklyTotal* 100.0)/100.0));
          
         
         /*
@@ -170,34 +173,7 @@ public class ProblemSet1 {
       double holeArea = Math.pow(holeRadius, 2) * 3.14;
       double surfaceArea = boardArea - holeArea;
 
-      System.out.println("\n" + (Math.round(surfaceArea)) + " square inches.");
-        
-        
-        /*
-         * Exercise 7.
-         * 
-         * I am planning a class trip next month. How many buses do I need, and how many
-         * people will be on the last bus?
-         */
-      boolean isLeapYear;
-      double year =
-      // divisible by 4
-      isLeapYear = (year % 4 == 0);
-      // divisible by 4 and not 100
-      isLeapYear = isLeapYear && (year % 100 != 0);
-      // divisible by 4 and not 100 unless divisible by 400
-      isLeapYear = isLeapYear || (year % 400 == 0);
-
-      System.out.println(isLeapYear);
-        
-        
-        /*
-         * Exercise 8.
-         * 
-         * What is the surface area of a standard Cornhole board?
-         */
-        
-        
+      System.out.println("\n" + (Math.round(surfaceArea* 100.0)/100.0) + " square inches.");
         
         /*
          * Exercise 9.
@@ -205,6 +181,32 @@ public class ProblemSet1 {
          * Are the years 2020, 2100, and 2400 leap years?
          */
         
+      boolean isLeapYear1;
+      double year1 = 2020;
+      // divisible by 4
+      isLeapYear1 = (year1 % 4 == 0);
+
+   	  boolean isLeapYear2;
+      double year2 = 2100;
+      // divisible by 4
+      isLeapYear2 = (year2 % 4 == 0);
+      // divisible by 4 and not 100
+      isLeapYear2 = isLeapYear2 && (year2 % 100 != 0);
+	  
+	  boolean isLeapYear3;
+      double year3 = 2400;
+      // divisible by 4
+      isLeapYear3 = (year3 % 4 == 0);
+      // divisible by 4 and not 100
+      isLeapYear3 = isLeapYear3 && (year3 % 100 != 0);
+      // divisible by 4 and not 100 unless divisible by 400
+      isLeapYear3 = isLeapYear3 || (year3 % 400 == 0);
+
+      System.out.println("\n2020 is a leap year " + isLeapYear1);
+	  System.out.println("2100 is a leap year " + isLeapYear2);
+	  System.out.println("2400 is a leap year " + isLeapYear3);
+        
+      
         
         
         /*
@@ -212,7 +214,13 @@ public class ProblemSet1 {
          * 
          * What is the wind chill?
          */
-        
+        double t = 38;
+		double v = 14;
+		double quation = 35.74 + (0.6215 * t) + (((0.4275 * t) - 35.75)* Math.pow(v, 0.16));
+		
+		System.out.println((Math.round(quation* 100.0)/100.0) + " degrees.");
+		
+		
         
         
     }
